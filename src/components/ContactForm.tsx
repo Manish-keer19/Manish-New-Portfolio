@@ -66,7 +66,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Phone</div>
-                  <div className="text-muted-foreground">969636336</div>
+                  <div className="text-muted-foreground">9691636336</div>
                   <div className="text-muted-foreground"> 9165363367</div>
                 </div>
               </div>
