@@ -92,7 +92,7 @@ const ProjectsShowcase = () => {
         { name: "Redux", color: "purple-text-gradient" },
         { name: "MongoDB", color: "green-text-gradient" },
       ],
-      image:studyNotion, // Replace with actual image
+      image: studyNotion, // Replace with actual image
       source_code_link: "https://github.com/Manish-keer19/StudyNotion-Full-Stack-Project",
       liveUrl: "https://manishstudyportal.vercel.app/",
       featured: true
@@ -110,14 +110,14 @@ const ProjectsShowcase = () => {
             A collection of my work showcasing full-stack development skills across web, mobile, and desktop platforms
           </p>
         </div>
-        
+
         {/* Featured Projects */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {projects.filter(p => p.featured).map((project) => (
             <Card key={project.name} className="relative border-0 overflow-hidden group hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-background to-muted/20">
               <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.name}
                   className="w-full h-full  group-hover:scale-105 transition-transform duration-500 object-contain"
                 />
@@ -146,9 +146,9 @@ const ProjectsShowcase = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge 
-                      key={tag.name} 
-                      variant="outline" 
+                    <Badge
+                      key={tag.name}
+                      variant="outline"
                       className={`border-${tag.color.split('-')[0]}-500/20 text-${tag.color.split('-')[0]}-500`}
                     >
                       {tag.name}
@@ -159,15 +159,15 @@ const ProjectsShowcase = () => {
             </Card>
           ))}
         </div>
-        
+
         {/* Other Projects */}
         <div className="grid md:grid-cols-1 gap-8">
           {projects.filter(p => !p.featured).map((project) => (
             <Card key={project.name} className="border-0 overflow-hidden group hover:shadow-md transition-all duration-300 bg-muted/10">
               <div className="md:flex">
                 <div className="md:w-1/3 relative">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.name}
                     className="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -194,9 +194,9 @@ const ProjectsShowcase = () => {
                   <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge 
-                        key={tag.name} 
-                        variant="outline" 
+                      <Badge
+                        key={tag.name}
+                        variant="outline"
                         className={`text-xs border-${tag.color.split('-')[0]}-500/20 text-${tag.color.split('-')[0]}-500`}
                       >
                         {tag.name}
