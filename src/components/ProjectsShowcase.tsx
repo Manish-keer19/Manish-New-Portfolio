@@ -39,7 +39,7 @@ const ProjectsShowcase = () => {
       ],
       image: InstaClone, // Replace with actual image
       source_code_link: "https://github.com/Manish-keer19/Full_Stack-InstaClone-apk",
-      liveUrl: "https://github.com/Manish-keer19/Full_Stack-InstaClone-apk/blob/main/README.md",
+      liveUrl: "https://www.mediafire.com/file/lxamuh01o5ju2ea/instaclone.apk/file",
       featured: true
     },
     {
@@ -67,7 +67,7 @@ const ProjectsShowcase = () => {
       ],
       image: Android_Chat, // Replace with actual image
       source_code_link: "https://github.com/Manish-keer19/chatAndroidApp",
-      liveUrl: "https://github.com/Manish-keer19/chatAndroidApp/blob/main/README.md",
+      liveUrl: "https://www.mediafire.com/file/uxspenk3n8y46wn/manishChatApp.apk/file",
       featured: false
     },
     {
@@ -81,22 +81,10 @@ const ProjectsShowcase = () => {
       ],
       image: chat_desktop, // Replace with actual image
       source_code_link: "https://github.com/Manish-keer19/chat-web-app",
-      liveUrl: "https://github.com/Manish-keer19/chat-web-app",
+      liveUrl: "https://www.mediafire.com/file/nwocbj0icjrjrn4/manishchatapp_Setup_1.0.0.exe/file",
       featured: false
     },
-    {
-      name: "StudyNotion",
-      description: "Online learning platform that allows users to create, manage, and enroll in courses with secure authentication and progress tracking.",
-      tags: [
-        { name: "MERN Stack", color: "blue-text-gradient" },
-        { name: "Redux", color: "purple-text-gradient" },
-        { name: "MongoDB", color: "green-text-gradient" },
-      ],
-      image: studyNotion, // Replace with actual image
-      source_code_link: "https://github.com/Manish-keer19/StudyNotion-Full-Stack-Project",
-      liveUrl: "https://manishstudyportal.vercel.app/",
-      featured: true
-    }
+  
   ];
 
   return (
