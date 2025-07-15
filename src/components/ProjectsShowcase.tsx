@@ -67,7 +67,7 @@ const ProjectsShowcase = () => {
       ],
       image: Android_Chat, // Replace with actual image
       source_code_link: "https://github.com/Manish-keer19/chatAndroidApp",
-      liveUrl: "https://www.mediafire.com/file/uxspenk3n8y46wn/manishChatApp.apk/file",
+      liveUrl: "https://www.mediafire.com/file/s0rjh7hbh82hsda/manishchatappnew.apk/file",
       featured: false
     },
     {
@@ -84,7 +84,7 @@ const ProjectsShowcase = () => {
       liveUrl: "https://www.mediafire.com/file/nwocbj0icjrjrn4/manishchatapp_Setup_1.0.0.exe/file",
       featured: false
     },
-  
+
   ];
 
   return (
