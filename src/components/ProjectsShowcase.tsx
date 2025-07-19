@@ -104,12 +104,15 @@ const ProjectsShowcase = () => {
           {projects.filter(p => p.featured).map((project) => (
             <Card key={project.name} className="relative border-0 overflow-hidden group hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-background to-muted/20">
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-full  group-hover:scale-105 transition-transform duration-500 object-contain"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90" />
+                {project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full group-hover:scale-105 transition-transform duration-500 object-contain"
+                    />
+                  </a>
+                )}
               </div>
               <CardContent className="p-6 relative z-10">
                 <div className="flex justify-between items-start mb-4">
@@ -154,11 +157,16 @@ const ProjectsShowcase = () => {
             <Card key={project.name} className="border-0 overflow-hidden group hover:shadow-md transition-all duration-300 bg-muted/10">
               <div className="md:flex">
                 <div className="md:w-1/3 relative">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer z-10 relative block">
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </a>
+                  )}
+
                   <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent md:hidden" />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
