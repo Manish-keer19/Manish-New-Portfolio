@@ -1,6 +1,4 @@
 import m1 from "../assets/m1.jpg"
-import m2 from "../assets/m2.jpg"
-
 
 
 const AboutSection = () => {
@@ -30,7 +28,7 @@ const AboutSection = () => {
                   {/* Replace with your image */}
                   <img 
                     // src="https://res.cloudinary.com/manish19/image/upload/v1749885126/IMG_20250525_221411_sptfql.jpg" // Update this path
-                    src={m2}
+                    src={m1}
                  
                     alt="Manish Keer"
                     className="w-full h-full object-cover rounded-full "
