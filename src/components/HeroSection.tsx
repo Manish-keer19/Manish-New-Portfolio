@@ -13,7 +13,7 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="animate-slide-up">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground">
             <span className="block text-2xl md:text-3xl font-normal text-muted-foreground mb-4">
               Hi, I'm
             </span>

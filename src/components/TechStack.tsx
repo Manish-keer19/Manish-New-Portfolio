@@ -408,7 +408,7 @@ const TechStack = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Tech Stack</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -467,7 +467,7 @@ const TechStack = () => {
               <div className="w-16 h-16 mb-4 flex items-center justify-center text-4xl">
                 {tech.icon}
               </div>
-              <h3 className="font-semibold text-lg mb-2 text-center">{tech.name}</h3>
+              <h3 className="font-semibold text-lg mb-2 text-center text-foreground">{tech.name}</h3>
               <Badge variant="secondary" className="text-xs">
                 {tech.category}
               </Badge>

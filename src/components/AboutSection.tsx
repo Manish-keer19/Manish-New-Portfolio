@@ -1,4 +1,5 @@
 import m1 from "../assets/m1.jpg"
+import manish from "../assets/manish.png"
 
 
 const AboutSection = () => {
@@ -7,15 +8,17 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               About <span className="text-gradient">Me</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I build real-time, responsive, and modern applications with a focus on clean design and smooth user experiences.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              As a full-stack developer, I specialize in MERN Stack, Spring Boot, and React Native, crafting scalable, high-performance solutions that seamlessly connect front-end creativity with back-end power.
-            </p>
+    <p className="text-lg text-muted-foreground leading-relaxed">
+  I build modern, scalable, and real-time web and mobile applications with a focus on clean architecture, responsive design, and seamless user experiences.
+</p>
+<p className="text-lg text-muted-foreground leading-relaxed">
+  As a full-stack developer skilled in the MERN Stack, Spring Boot, and React Native, I create high-performance solutions that connect elegant front-end interfaces with powerful back-end systems. I also develop Android apps that deliver smooth, native-like experiences. Whether freelancing or contributing to a development team, I’m passionate about building reliable, production-ready software that adds real value.
+</p>
+
+
           </div>
 
           <div className="flex justify-center">
@@ -25,7 +28,8 @@ const AboutSection = () => {
                   {/* Replace with your image */}
                   <img
                     // src="https://res.cloudinary.com/manish19/image/upload/v1749885126/IMG_20250525_221411_sptfql.jpg" // Update this path
-                    src={m1}
+                    // src={m1}
+                    src={manish}
 
                     alt="Manish Keer"
                     className="w-full h-full object-cover rounded-full "

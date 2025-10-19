@@ -59,21 +59,21 @@ const Navigation = () => {
               alt="Logo" 
               className="h-10 w-10 rounded-full object-cover border-2 border-primary group-hover:border-secondary transition-all duration-300"
             />
-            <span className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent group-hover:from-secondary group-hover:to-primary transition-all duration-500">
+            <span className="text-lg font-bold text-foreground group-hover:text-primary transition-all duration-500">
               Full Stack Dev
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 bg-white/5 backdrop-blur-sm rounded-full px-2 py-1 border border-white/10">
+          <div className="hidden md:flex items-center space-x-1 bg-white/5 backdrop-blur-sm rounded-full px-2 py-1 border border-white/10 dark:bg-white/5 dark:border-white/10 bg-black/5 border-black/10">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeLink === item.id 
-                    ? 'text-white bg-gradient-to-r from-primary/30 to-secondary/30'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'text-foreground bg-gradient-to-r from-primary/30 to-secondary/30'
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {item.label}
@@ -91,9 +91,9 @@ const Navigation = () => {
             aria-label="Toggle menu"
           >
             <div className={`w-6 h-6 relative transition-all duration-300 ${isMenuOpen ? 'rotate-180' : ''}`}>
-              <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-1/2' : 'top-0'}`} />
-              <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'}`} />
-              <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-1/2' : 'bottom-0'}`} />
+              <span className={`absolute block w-full h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-1/2' : 'top-0'}`} />
+              <span className={`absolute block w-full h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'}`} />
+              <span className={`absolute block w-full h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-1/2' : 'bottom-0'}`} />
             </div>
           </button>
         </div>
@@ -112,8 +112,8 @@ const Navigation = () => {
               onClick={() => scrollToSection(item.id)}
               className={`text-3xl font-medium relative overflow-hidden py-2 px-4 transition-all duration-500 ${
                 activeLink === item.id
-                  ? 'text-white'
-                  : 'text-gray-300 hover:text-white'
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               {item.label}

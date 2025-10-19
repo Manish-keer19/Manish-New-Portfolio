@@ -40,7 +40,7 @@ const SocialSection = () => {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/manish_keer19/',
+      url: 'https://www.instagram.com/manish.tsx',
       icon: <Instagram className="h-5 w-5" />,
       color: 'from-pink-500 to-purple-600',
       bg: 'bg-gradient-to-br from-pink-500 to-purple-600'
@@ -86,7 +86,7 @@ const SocialSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
           >
             Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Connect</span>
           </motion.h2>
