@@ -1,0 +1,161 @@
+%-------------------------
+% ATS-Optimized Resume - Manish Keer
+% Full-Stack Developer | Backend Engineer
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Manish Keer} \\ \vspace{3pt}
+    \small Full-Stack Developer | Backend Engineer | MERN Stack \\ \vspace{2pt}
+    Indore, India \\ \vspace{2pt}
+    \href{mailto:manishkeer530@gmail.com}{manishkeer530@gmail.com} $|$
+    +91 9691636336 $|$
+    \href{https://manish-portfolio19.vercel.app}{Portfolio} $|$
+    \href{https://github.com/Manish-keer19}{GitHub} $|$
+    \href{https://linkedin.com/in/manish-keer19}{LinkedIn}
+\end{center}
+
+%-----------OBJECTIVE-----------
+\section{Career Objective}
+Entry-level Software Engineer passionate about building scalable, real-time web applications using modern technologies. Seeking to contribute technical expertise in Node.js, React, and Spring Boot to deliver impactful digital solutions.
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Medi-Caps University}{Indore, India}
+    {Bachelor of Computer Applications (BCA) | CGPA: 7.7/10}{Aug 2022 -- May 2025}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Backend Development Trainee}{Aug 2025 -- Oct 2025}
+    {Singaji Software Solutions}{Indore, India}
+    \resumeItemListStart
+      \resumeItem{Developed and deployed \textbf{RESTful APIs} for Financial Model Project using \textbf{Node.js} and \textbf{Express.js}, improving data processing efficiency by 30\%.}
+      \resumeItem{Collaborated with frontend developers to integrate APIs, ensuring seamless data flow and optimal application performance.}
+      \resumeItem{Optimized database queries and schema design in \textbf{MongoDB}, reducing query response time by 25\%.}
+      \resumeItem{Participated in Agile development cycles, demonstrating strong problem-solving skills and proactive learning approach.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Manish's Bet App} $|$ \emph{Node.js, React, WebSocket, MongoDB, Express.js}}{Mar 2025}
+    \resumeItemListStart
+      \resumeItem{Engineered a \textbf{real-time betting platform} supporting multiple game modes with \textbf{WebSocket} integration for instant updates.}
+      \resumeItem{Developed scalable backend APIs handling 100+ concurrent users with secure wallet transactions and live odds synchronization.}
+      \resumeItem{Implemented JWT-based authentication and built responsive React UI with Redux state management for seamless UX.}
+      \resumeItem{\textbf{Live:} \href{https://manish-bet-app.vercel.app}{manish-bet-app.vercel.app}}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{InstaClone Social Media App} $|$ \emph{React Native, Express.js, MongoDB, JWT, Cloudinary}}{2024}
+    \resumeItemListStart
+      \resumeItem{Built a full-featured \textbf{mobile social media application} enabling users to create posts, like, comment, and follow others.}
+      \resumeItem{Integrated \textbf{JWT authentication} and \textbf{Cloudinary} for secure image uploads, processing 500+ media files efficiently.}
+      \resumeItem{Designed RESTful APIs with Express.js and MongoDB, optimizing endpoint performance for faster data retrieval.}
+      \resumeItem{Published as installable Android APK with 50+ downloads. \textbf{APK:} \href{https://www.mediafire.com/file/lxamuh01o5ju2ea/instaclone.apk/file}{Download Link}}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Manish Chat App} $|$ \emph{React, Spring Boot, WebSocket, MongoDB, JWT, OAuth2}}{2024}
+    \resumeItemListStart
+      \resumeItem{Developed a cross-platform \textbf{real-time chat application} with group messaging and media sharing capabilities.}
+      \resumeItem{Implemented secure authentication using \textbf{JWT} and \textbf{OAuth2}, ensuring data privacy and user verification.}
+      \resumeItem{Built backend infrastructure with \textbf{Spring Boot} and WebSocket for instant message delivery and persistence.}
+      \resumeItem{\textbf{Live:} \href{https://manishchatapp.vercel.app}{manishchatapp.vercel.app}}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+  \textbf{Languages:} JavaScript (ES6+), TypeScript, Java, HTML5, CSS3 \\
+  \textbf{Frontend:} React.js, React Native, Redux, Tailwind CSS, Responsive Design \\
+  \textbf{Backend:} Node.js, Express.js, Spring Boot, RESTful APIs, WebSocket, JWT, OAuth2 \\
+  \textbf{Databases:} MongoDB, MySQL, Mongoose, Prisma ORM \\
+  \textbf{Tools \& Platforms:} Git, GitHub, Docker, Postman, VS Code, Vercel, Render, Railway \\
+  \textbf{Soft Skills:} Problem Solving, Team Collaboration, Agile Methodology, Communication
+  }}
+\end{itemize}
+
+%-----------ADDITIONAL INFORMATION-----------
+\section{Additional Information}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+  \textbf{Languages:} English (Professional), Hindi (Native) \\
+  \textbf{Availability:} Available for immediate joining
+  }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
