@@ -20,6 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Outfit', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {

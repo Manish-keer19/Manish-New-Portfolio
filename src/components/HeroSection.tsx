@@ -13,25 +13,27 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="animate-slide-up">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground">
-            <span className="block text-2xl md:text-3xl font-normal text-muted-foreground mb-4">
-              Hi, I'm
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground tracking-tight">
+            <span className="block text-xl md:text-2xl font-medium text-primary mb-4 tracking-wide uppercase">
+              Full Stack Developer
             </span>
-            <span className="text-gradient">Manish Keer</span>
-            <span className="text-4xl md:text-6xl ml-4">👋</span>
+            <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-blue-600">
+              Manish Keer
+            </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Full-Stack & Android Developer | MERN Stack | Spring Boot | React Native
+          <p className="text-lg md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
+            Building scalable, real-time applications with <span className="text-foreground font-semibold">React</span>, <span className="text-foreground font-semibold">Node.js</span>, and <span className="text-foreground font-semibold">Spring Boot</span>.
+            Transforming ideas into high-performance digital solutions.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full glow-green transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-6 text-lg rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <ExternalLink className="mr-2 h-5 w-5" />
+              <ExternalLink className="mr-2 h-6 w-6" />
               View Projects
             </Button>
 
@@ -44,13 +46,12 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-primary/50 hover:bg-primary/10 font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                className="border-2 border-primary/20 hover:border-primary hover:bg-primary/5 text-foreground font-semibold px-10 py-6 text-lg rounded-full transition-all duration-300 hover:-translate-y-1"
               >
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 h-6 w-6" />
                 Download Resume
               </Button>
             </a>
-
           </div>
         </div>
       </div>

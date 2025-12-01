@@ -22,7 +22,10 @@ import {
   SiElectron,
   SiGithub,
   SiMysql,
-  SiAndroid
+  SiAndroid,
+  SiNginx,
+  SiAmazon,
+  SiGithubactions
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -43,6 +46,9 @@ const TechStack = () => {
     { name: 'Python', icon: <SiPython className="text-blue-400" />, category: 'Language' },
     { name: 'Git', icon: <SiGit className="text-orange-600" />, category: 'DevOps' },
     { name: 'Docker', icon: <SiDocker className="text-blue-400" />, category: 'DevOps' },
+    { name: 'Nginx', icon: <SiNginx className="text-green-500" />, category: 'DevOps' },
+    { name: 'AWS EC2', icon: <SiAmazon className="text-orange-500" />, category: 'DevOps' },
+    { name: 'GitHub Actions', icon: <SiGithubactions className="text-blue-500" />, category: 'DevOps' },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-700" />, category: 'Database' },
     { name: 'SQL', icon: <SiMysql className="text-blue-600" />, category: 'Database' },
     { name: 'Next.js', icon: <SiNextdotjs className="text-black dark:text-white" />, category: 'Fullstack' },
@@ -86,14 +92,15 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="tech" className="py-20 px-4 bg-gradient-to-b from-background to-muted/10">
+    <section id="tech" className="py-24 px-4 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Tech Stack</span>
@@ -103,38 +110,38 @@ const TechStack = () => {
           </p>
         </motion.div>
 
-        {/* Core Skills Section - Responsive: Single column on mobile, grid on desktop */}
+        {/* Core Skills Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-20"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
-            Core Skills
+          <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center text-foreground">
+            Core Expertise
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {coreSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover={{ y: -5 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center p-6 rounded-xl bg-background border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+                className="flex flex-col items-center p-8 rounded-2xl bg-card/30 backdrop-blur-sm border border-white/10 shadow-lg hover:shadow-primary/5 transition-all duration-300 text-center group"
               >
-                <div className="w-16 h-16 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+                <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                   {skill.icon}
                 </div>
-                <h4 className="font-semibold text-lg md:text-xl mb-3 text-foreground">
+                <h4 className="font-bold text-xl mb-4 text-foreground">
                   {skill.name}
                 </h4>
-                <p className="text-sm md:text-base text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                   {skill.description}
                 </p>
-                <Badge variant="outline" className="px-3 py-1">
+                <Badge variant="secondary" className="px-4 py-1.5 text-sm">
                   {skill.category}
                 </Badge>
               </motion.div>
@@ -144,7 +151,7 @@ const TechStack = () => {
 
         {/* Category Filter */}
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-4 mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -152,7 +159,7 @@ const TechStack = () => {
         >
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${!activeCategory ? 'bg-primary text-primary-foreground shadow-md' : 'bg-muted/50 hover:bg-muted'}`}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${!activeCategory ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105' : 'bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground'}`}
           >
             All
           </button>
@@ -160,17 +167,18 @@ const TechStack = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === category ? 'bg-primary text-primary-foreground shadow-md' : 'bg-muted/50 hover:bg-muted'}`}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeCategory === category ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105' : 'bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground'}`}
             >
               {category}
             </button>
           ))}
         </motion.div>
 
-        {/* Tech Grid - Optimized for Mobile: Horizontal scrollable list on small screens */}
-        <div className="overflow-hidden">
+        {/* Tech Grid */}
+        <div className="min-h-[400px]">
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+            layout
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -178,44 +186,24 @@ const TechStack = () => {
           >
             {filteredTechs.map((tech, index) => (
               <motion.div
+                layout
                 key={tech.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ y: -5, scale: 1.05 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20,
-                  delay: index * 0.03
-                }}
-                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                className="flex flex-col items-center p-4 rounded-xl bg-background border border-muted/50 hover:border-primary/30 shadow-sm hover:shadow-md transition-all duration-300 cursor-default min-w-[140px] sm:min-w-0"
+                transition={{ duration: 0.3 }}
+                className="flex flex-col items-center p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-white/5 hover:border-primary/30 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 mb-3 flex items-center justify-center text-3xl sm:text-4xl">
+                <div className="w-14 h-14 mb-4 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 text-center text-foreground  line-clamp-2">
+                <h3 className="font-medium text-sm sm:text-base text-center text-muted-foreground group-hover:text-foreground transition-colors">
                   {tech.name}
                 </h3>
-                <Badge variant="secondary" className="text-xs hidden sm:block">
-                  {tech.category}
-                </Badge>
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Mobile Horizontal Scroll Indicator (Optional subtle hint) */}
-          <div className="sm:hidden flex justify-center mt-4">
-            <motion.div
-              className="flex space-x-1"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              
-            </motion.div>
-          </div>
         </div>
 
         {/* Empty State */}
@@ -223,9 +211,9 @@ const TechStack = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-12"
+            className="text-center py-20"
           >
-            <p className="text-muted-foreground">No technologies found in this category</p>
+            <p className="text-muted-foreground text-lg">No technologies found in this category</p>
           </motion.div>
         )}
       </div>

@@ -15,6 +15,9 @@ import ContactForm from '@/components/ContactForm';
 import Navigation from '@/components/Navigation';
 import SocialSection from '@/components/SocialSection';
 
+import EngineeringPhilosophy from '@/components/EngineeringPhilosophy';
+import BraggingRights from '@/components/BraggingRights';
+
 const Index = () => {
   const [isDark, setIsDark] = useState(true);
 
@@ -56,14 +59,20 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Section */}
-      <AboutSection />
+      {/* Projects Showcase */}
+      <ProjectsShowcase />
 
       {/* Tech Stack */}
       <TechStack />
 
-      {/* Projects Showcase */}
-      <ProjectsShowcase />
+      {/* About Section */}
+      <AboutSection />
+
+      {/* Engineering Philosophy */}
+      <EngineeringPhilosophy />
+
+      {/* Bragging Rights / Stats */}
+      <BraggingRights />
 
       <SocialSection />
 
@@ -74,7 +83,7 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-muted">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 Manish Keer. Built with React & Tailwind CSS
+            © 2025 Manish Keer
           </p>
         </div>
       </footer>
