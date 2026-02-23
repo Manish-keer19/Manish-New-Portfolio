@@ -20,7 +20,7 @@ import chat_web from "../assets/chat_web.png";
 import studyNotion from "../assets/study.png";
 import nestApp from "../assets/nest_app.png";
 
-import shell from "../assets/Shell.png";
+import shell from "../assets/shell.png";
 import { useState } from "react";
 
 type ProjectTag = { name: string; color: string };
