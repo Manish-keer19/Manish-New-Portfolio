@@ -11,21 +11,22 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiMongodb,
-  SiPython,
   SiGit,
   SiDocker,
   SiPostgresql,
   SiNextdotjs,
   SiSpring,
   SiReact as SiReactNative,
-  SiSocketdotio,
+  SiNestjs,
+  SiWebrtc,
   SiElectron,
   SiGithub,
   SiMysql,
   SiAndroid,
   SiNginx,
   SiAmazon,
-  SiGithubactions
+  SiGithubactions,
+  SiMariadb,
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -34,65 +35,196 @@ const TechStack = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const technologies = [
-    { name: 'HTML 5', icon: <SiHtml5 className="text-orange-500" />, category: 'Frontend' },
-    { name: 'CSS 3', icon: <SiCss3 className="text-blue-500" />, category: 'Frontend' },
-    { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" />, category: 'Language' },
-    { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" />, category: 'Language' },
-    { name: 'React JS', icon: <SiReact className="text-cyan-500" />, category: 'Frontend' },
-    { name: 'Redux Toolkit', icon: <SiRedux className="text-purple-500" />, category: 'State' },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-cyan-400" />, category: 'Styling' },
-    { name: 'Node JS', icon: <SiNodedotjs className="text-green-500" />, category: 'Backend' },
-    { name: 'MongoDB', icon: <SiMongodb className="text-green-600" />, category: 'Database' },
-    { name: 'Python', icon: <SiPython className="text-blue-400" />, category: 'Language' },
-    { name: 'Git', icon: <SiGit className="text-orange-600" />, category: 'DevOps' },
-    { name: 'Docker', icon: <SiDocker className="text-blue-400" />, category: 'DevOps' },
-    { name: 'Nginx', icon: <SiNginx className="text-green-500" />, category: 'DevOps' },
-    { name: 'AWS EC2', icon: <SiAmazon className="text-orange-500" />, category: 'DevOps' },
-    { name: 'GitHub Actions', icon: <SiGithubactions className="text-blue-500" />, category: 'DevOps' },
-    { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-700" />, category: 'Database' },
-    { name: 'SQL', icon: <SiMysql className="text-blue-600" />, category: 'Database' },
-    { name: 'Next.js', icon: <SiNextdotjs className="text-black dark:text-white" />, category: 'Fullstack' },
-    { name: 'Java', icon: <FaJava className="text-orange-500 text-3xl" />, category: 'Language' },
-    { name: 'Spring Boot', icon: <SiSpring className="text-green-600" />, category: 'Backend' },
-    { name: 'JWT', icon: <span className="text-pink-500 text-3xl">🔐</span>, category: 'Security' },
-    { name: 'React Native', icon: <SiReactNative className="text-cyan-500" />, category: 'Mobile' },
-    { name: 'Electron.js', icon: <SiElectron className="text-blue-400" />, category: 'Desktop' },
-    { name: 'GitHub', icon: <SiGithub className="text-black dark:text-white" />, category: 'DevOps' },
-    { name: 'Android', icon: <SiAndroid className="text-green-600" />, category: 'Mobile' }
+    {
+      name: "HTML 5",
+      icon: <SiHtml5 className="text-orange-500" />,
+      category: "Frontend",
+    },
+    {
+      name: "CSS 3",
+      icon: <SiCss3 className="text-blue-500" />,
+      category: "Frontend",
+    },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript className="text-yellow-400" />,
+      category: "Language",
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript className="text-blue-600" />,
+      category: "Language",
+    },
+    {
+      name: "Java",
+      icon: <FaJava className="text-orange-500 text-3xl" />,
+      category: "Language",
+    },
+    {
+      name: "React JS",
+      icon: <SiReact className="text-cyan-500" />,
+      category: "Frontend",
+    },
+    {
+      name: "Redux Toolkit",
+      icon: <SiRedux className="text-purple-500" />,
+      category: "Frontend",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-cyan-400" />,
+      category: "Frontend",
+    },
+    {
+      name: "Next.js",
+      icon: <SiNextdotjs className="text-black dark:text-white" />,
+      category: "Frontend",
+    },
+    {
+      name: "Node JS",
+      icon: <SiNodedotjs className="text-green-500" />,
+      category: "Backend",
+    },
+    {
+      name: "Express.js",
+      icon: <SiNodedotjs className="text-gray-400" />,
+      category: "Backend",
+    },
+    {
+      name: "NestJS",
+      icon: <SiNestjs className="text-red-500" />,
+      category: "Backend",
+    },
+    {
+      name: "Spring Boot",
+      icon: <SiSpring className="text-green-600" />,
+      category: "Backend",
+    },
+    {
+      name: "WebSockets",
+      icon: <span className="text-yellow-400 text-2xl">⚡</span>,
+      category: "Backend",
+    },
+    {
+      name: "WebRTC",
+      icon: <SiWebrtc className="text-blue-500" />,
+      category: "Backend",
+    },
+    {
+      name: "JWT",
+      icon: <span className="text-pink-500 text-2xl">🔐</span>,
+      category: "Security",
+    },
+    {
+      name: "OAuth2",
+      icon: <span className="text-blue-400 text-2xl">🛡️</span>,
+      category: "Security",
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb className="text-green-600" />,
+      category: "Database",
+    },
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql className="text-blue-700" />,
+      category: "Database",
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql className="text-blue-600" />,
+      category: "Database",
+    },
+    {
+      name: "MariaDB",
+      icon: <SiMariadb className="text-amber-700" />,
+      category: "Database",
+    },
+    {
+      name: "React Native",
+      icon: <SiReactNative className="text-cyan-500" />,
+      category: "Mobile",
+    },
+    {
+      name: "Android",
+      icon: <SiAndroid className="text-green-600" />,
+      category: "Mobile",
+    },
+    {
+      name: "Docker",
+      icon: <SiDocker className="text-blue-400" />,
+      category: "DevOps",
+    },
+    {
+      name: "AWS EC2",
+      icon: <SiAmazon className="text-orange-500" />,
+      category: "DevOps",
+    },
+    {
+      name: "Nginx",
+      icon: <SiNginx className="text-green-500" />,
+      category: "DevOps",
+    },
+    {
+      name: "GitHub Actions",
+      icon: <SiGithubactions className="text-blue-500" />,
+      category: "DevOps",
+    },
+    {
+      name: "Git",
+      icon: <SiGit className="text-orange-600" />,
+      category: "DevOps",
+    },
+    {
+      name: "GitHub",
+      icon: <SiGithub className="text-black dark:text-white" />,
+      category: "DevOps",
+    },
+    {
+      name: "Electron.js",
+      icon: <SiElectron className="text-blue-400" />,
+      category: "Desktop",
+    },
   ];
 
   // Get unique categories
-  const categories = [...new Set(technologies.map(tech => tech.category))];
+  const categories = [...new Set(technologies.map((tech) => tech.category))];
 
   // Filter technologies based on active category
   const filteredTechs = activeCategory
-    ? technologies.filter(tech => tech.category === activeCategory)
+    ? technologies.filter((tech) => tech.category === activeCategory)
     : technologies;
 
   // Core Skills Data
   const coreSkills = [
     {
-      name: 'MERN Stack',
-      icon: <SiReact className="text-cyan-500 text-4xl" />,
-      description: 'MongoDB, Express.js, React, Node.js - Full-stack JavaScript development for scalable web apps.',
-      category: 'Fullstack'
+      name: "MERN Stack & Backend APIs",
+      icon: <SiNodedotjs className="text-green-500 text-4xl" />,
+      description:
+        "MongoDB, Express.js, React, Node.js — building scalable REST APIs, real-time WebSocket systems, JWT auth, and cloud-ready deployments.",
+      category: "Fullstack",
     },
     {
-      name: 'Spring Boot Java Full Stack',
-      icon: <SiSpring className="text-green-600 text-4xl" />,
-      description: 'Spring Boot, Java, REST APIs, integrated with frontend frameworks for enterprise-grade applications.',
-      category: 'Fullstack'
+      name: "NestJS & Real-Time Systems",
+      icon: <SiNestjs className="text-red-500 text-4xl" />,
+      description:
+        "NestJS with TypeScript for enterprise-grade backend architecture. WebRTC for P2P audio/video, WebSocket signaling, and PostgreSQL for data persistence.",
+      category: "Backend",
     },
     {
-      name: 'React Native Android Developer',
-      icon: <SiReactNative className="text-cyan-500 text-4xl" />,
-      description: 'Cross-platform mobile development with React Native, focusing on Android for native-like performance.',
-      category: 'Mobile'
-    }
+      name: "React Native Android Developer",
+      icon: <SiAndroid className="text-green-600 text-4xl" />,
+      description:
+        "Building cross-platform Android apps with React Native CLI — delivering native-like performance, Cloudinary media, and REST API integration.",
+      category: "Mobile",
+    },
   ];
 
   return (
-    <section id="tech" className="py-24 px-4 bg-background relative overflow-hidden">
+    <section
+      id="tech"
+      className="py-24 px-4 bg-background relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -103,10 +235,14 @@ const TechStack = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Tech Stack</span>
+            My{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
+              Tech Stack
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tools and technologies I use to build exceptional digital experiences
+            Tools and technologies I use to build exceptional digital
+            experiences
           </p>
         </motion.div>
 
@@ -159,15 +295,15 @@ const TechStack = () => {
         >
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${!activeCategory ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105' : 'bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground'}`}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${!activeCategory ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105" : "bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground"}`}
           >
             All
           </button>
-          {categories.map(category => (
+          {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeCategory === category ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105' : 'bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground'}`}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeCategory === category ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105" : "bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground"}`}
             >
               {category}
             </button>
@@ -213,7 +349,9 @@ const TechStack = () => {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-muted-foreground text-lg">No technologies found in this category</p>
+            <p className="text-muted-foreground text-lg">
+              No technologies found in this category
+            </p>
           </motion.div>
         )}
       </div>
