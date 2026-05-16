@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { TbCloudComputing } from "react-icons/tb";
 import {
   SiHtml5,
   SiCss3,
@@ -29,7 +30,7 @@ import {
   SiMariadb,
 } from "react-icons/si";
 
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaServer } from "react-icons/fa";
 
 const TechStack = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -195,31 +196,30 @@ const TechStack = () => {
     ? technologies.filter((tech) => tech.category === activeCategory)
     : technologies;
 
-  // Core Skills Data
-  const coreSkills = [
-    {
-      name: "MERN Stack & Backend APIs",
-      icon: <SiNodedotjs className="text-green-500 text-4xl" />,
-      description:
-        "MongoDB, Express.js, React, Node.js — building scalable REST APIs, real-time WebSocket systems, JWT auth, and cloud-ready deployments.",
-      category: "Fullstack",
-    },
-    {
-      name: "NestJS & Real-Time Systems",
-      icon: <SiNestjs className="text-red-500 text-4xl" />,
-      description:
-        "NestJS with TypeScript for enterprise-grade backend architecture. WebRTC for P2P audio/video, WebSocket signaling, and PostgreSQL for data persistence.",
-      category: "Backend",
-    },
-    {
-      name: "React Native Android Developer",
-      icon: <SiAndroid className="text-green-600 text-4xl" />,
-      description:
-        "Building cross-platform Android apps with React Native CLI — delivering native-like performance, Cloudinary media, and REST API integration.",
-      category: "Mobile",
-    },
-  ];
+const coreSkills = [
+  {
+    name: "Full-Stack & Backend Engineering",
+    icon: <SiNodedotjs className="text-green-500 text-4xl" />,
+    description:
+      "Building scalable full-stack applications using MongoDB, Express.js, React, Node.js, and NestJS with TypeScript. Experienced in REST APIs, JWT authentication, PostgreSQL, WebSocket real-time systems, WebRTC communication, and cloud-ready backend architectures.",
+    category: "Fullstack",
+  },
 
+  {
+    name: "React Native & Cross-Platform Mobile Development",
+    icon: <SiAndroid className="text-green-600 text-4xl" />,
+    description:
+      "Building high-performance cross-platform Android & iOS applications using React Native CLI and Expo, with seamless REST API integration, Cloudinary media handling, optimized state management, and native-like user experiences.",
+    category: "Mobile",
+  },
+{
+  name: "Cloud, DevOps & Deployment",
+  icon: <TbCloudComputing className="text-blue-500 text-4xl" />,
+  description:
+    "Deploying and managing production-ready applications on AWS EC2 with Docker, Kubernetes, Nginx, CI/CD pipelines, and AWS S3. Experienced in server configuration, reverse proxy setup, containerized deployments, scalability, and cloud infrastructure management.",
+  category: "DevOps",
+},
+];
   return (
     <section
       id="tech"
